@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/dv2styles.css" media="all">
+
+
+</head>
+<body>
+  
+<div id = "vis1"></div>
+<div id = "vis2"></div>
+
+<script type="text/javascript">
+
+  var spec2 = "visual/dv2drinks_map.json";
+  var spec3 = "visual/dv2drinks_interactivegraph.json";
+  
+  vegaEmbed('#vis1', spec2, {"actions": false}).then(function(result) {
+
+  }).catch(console.error);
+
+  vegaEmbed('#vis2', spec3, {"actions": false}).then(function(result) {
+
+}).catch(console.error);
+
+</script>
+
+</body>
+</html>
