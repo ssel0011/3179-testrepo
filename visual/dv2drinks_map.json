@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Total Alcohol around the world",
+    "width": 800,
+    "height": 600,
+    "projection": {"type": "equirectangular"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/world.topojson.json",
+      "format": {"type": "topojson", "feature": "world.geo (1)"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {"url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/drinks.csv"},
+          "key": "country",
+          "fields": ["total_litres_of_pure_alcohol"]
+        }
+      },
+      {
+        "calculate": "datum.total_litres_of_pure_alcohol + 1",
+        "as": "Total Litres of pure alcohol"
+      }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Total Litres of pure alcohol",
+        "type": "quantitative",
+        "scale": {
+          "type": "log",
+          "range": ["#fcc2fa", "#f748ef", "#b708af", "#3d033a"]
+        }
+      },
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {
+          "field": "total_litres_of_pure_alcohol",
+          "type": "quantitative",
+          "title": "Total Litres of pure alcohol"
+        }
+      ]
+    }
+  }
+
+   
