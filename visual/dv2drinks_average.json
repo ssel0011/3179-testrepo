@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Total Litres against servings" },
+    "data": {
+    "url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/drinks.csv"
+    },
+    "params": [
+        {
+          "name": "alcohol_selection",
+          "value": "wine_servings",
+          "bind": {
+            "input": "select",
+            "options": ["beer_servings", "spirit_servings", "wine_servings"],
+            "labels": ["Beer Servings", "Spirit Servings", "Wine Servings"],
+            "name": "Alcohol Selection" 
+          }
+        }
+    ],
+    "transform": [
+        {"calculate": "datum[alcohol_selection]", "as": "alcohol_select"}
+    ],
+    "mark": {"type": "point", "color": "#ce1f1f"},
+    "encoding": {
+        "x": {"field": "total_litres_of_pure_alcohol", "type": "quantitative", "title": "Total Litres of Pure Alcohol"},
+        "y": {"field": "alcohol_select", "type": "quantitative", "title": "Alcohol Servings"},
+        "size": {"aggregate": "mean", "field": "alcohol_select"},
+        
+        "tooltip": [
+            {"field": "country", "type": "nominal", "title": "Country"},
+            {"field": "total_litres_of_pure_alcohol", "type": "quantitative", "title": "Total Litres of Pure Alcohol"},
+            {"field": "alcohol_select", "type": "quantitative", "title": "Servings"}
+        ]
+   },
+   "width": 425,
+   "height": 425,
+   "config": {} 
+  }

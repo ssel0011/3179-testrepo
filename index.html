@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Alcohol Consumption</title>
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
   
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap" rel="stylesheet">
+
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/dv2styles.css" media="all">
 
 
 </head>
 <body>
-  
-<div id = "vis1"></div>
-<div id = "vis2"></div>
+  <h1>Alcohol Consumption</h1>
 
-<script type="text/javascript">
+  <div id = "vis1"></div>
+  <div id = "vis2"></div>
+  <div id = "vis3"></div>
+  <div id = "vis4"></div>
 
-  var spec2 = "visual/dv2drinks_map.json";
-  var spec3 = "visual/dv2drinks_interactivegraph.json";
-  
-  vegaEmbed('#vis1', spec2, {"actions": false}).then(function(result) {
+  <script type="text/javascript">
+
+    var spec2 = "visual/dv2drinks_map.json";
+    var spec3 = "visual/dv2drinks_interactivegraph.json";
+    var spec4 = "visual/dv2drinks_compare.json";
+    var spec5 = "visual/dv2drinks_average.json";
+    
+    vegaEmbed('#vis1', spec2, {"actions": false}).then(function(result) {
+
+    }).catch(console.error);
+
+    vegaEmbed('#vis2', spec3, {"actions": false}).then(function(result) {
 
   }).catch(console.error);
 
-  vegaEmbed('#vis2', spec3, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis3', spec4, {"actions": false}).then(function(result) {
 
-}).catch(console.error);
+  }).catch(console.error);
 
-</script>
+  vegaEmbed('#vis4', spec5, {"actions": false}).then(function(result) {
+
+  }).catch(console.error);
+
+  </script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": { "text": "Different Alcohol Servings" },
+  "title": { "text": "" },
   "data": {
   "url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/drinks.csv"
   },
@@ -19,13 +19,13 @@
   "transform": [
       {"calculate": "datum[alcohol_selection]", "as": "alcohol_select"}
   ],
-  "mark": {"type": "bar", "color": "#8732a8"},
+  "mark": {"type": "bar", "color": "#ce1f1f"},
   "encoding": {
-      "x": {"field": "country", "type": "nominal"},
-      "y": {"field": "alcohol_select", "type": "quantitative", "title": "Alcohol litres"},
+      "x": {"field": "alcohol_select", "type": "quantitative", "title": "Alcohol Servings"},
+      "y": {"field": "country", "type": "nominal"},
       "tooltip": [
         {"field": "country", "type": "nominal", "title": "Country"},
-        {"field": "alcohol_select", "type": "quantitative", "title": "Alcohol litres"}
+        {"field": "alcohol_select", "type": "quantitative", "title": "Servings"}
       ]
  },
  "config": {} 

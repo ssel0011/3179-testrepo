@@ -29,7 +29,7 @@
         "type": "quantitative",
         "scale": {
           "type": "log",
-          "range": ["#fcc2fa", "#f748ef", "#b708af", "#3d033a"]
+          "range": ["#ffb69e", "#ff6e3d", "#db3700", "#992600"]
         }
       },
       "tooltip": [

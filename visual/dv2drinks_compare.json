@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "" },
+    "data": {
+    "url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/drinks.csv"
+    },
+    "layer": [
+        {
+            "mark": {"type": "point", "shape": "circle", "color": "#ce1f1f"},
+            "encoding": {
+                "x": { "field": "beer_servings", "type": "quantitative", "title": "Servings" },
+                "y": { "field": "country", "type": "nominal" },
+            "tooltip": [
+                {"field": "country", "type": "nominal", "title": "Country"},
+                {"field": "beer_servings", "type": "quantitative", "title": "Servings"}
+                ]
+            }
+        },
+        {
+            "mark": {"type": "point", "shape": "square", "color": "#df8116"},
+            "encoding": {
+                "x": { "field": "spirit_servings", "type": "quantitative", "title": "Servings" },
+                "y": { "field": "country", "type": "nominal" },
+            "tooltip": [
+                {"field": "country", "type": "nominal", "title": "Country"},
+                {"field": "spirit_servings", "type": "quantitative", "title": "Servings"}
+                ]
+            }
+        },
+        {
+            "mark": {"type": "point", "shape": "triangle", "color": "#ceae1f"},
+            "encoding": {
+                "x": { "field": "wine_servings", "type": "quantitative", "title": "Servings" },
+                "y": { "field": "country", "type": "nominal" },
+            "tooltip": [
+                {"field": "country", "type": "nominal", "title": "Country"},
+                {"field": "wine_servings", "type": "quantitative", "title": "Servings"}
+                ]
+            }
+        }
+    ]
+   }
+   
