@@ -1,13 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Total Alcohol around the world",
-    "width": 800,
-    "height": 600,
+    "width": 700,
+    "height": 500,
     "projection": {"type": "equirectangular"},
     "data": {
       "url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/world.topojson.json",
       "format": {"type": "topojson", "feature": "world.geo (1)"}
     },
+    "background": "beige",
     "transform": [
       {
         "lookup": "properties.name",
@@ -22,14 +23,14 @@
         "as": "Total Litres of pure alcohol"
       }
     ],
-    "mark": {"type": "geoshape"},
+    "mark": {"type": "geoshape", "stroke": "white"},
     "encoding": {
       "color": {
         "field": "Total Litres of pure alcohol",
         "type": "quantitative",
         "scale": {
           "type": "log",
-          "range": ["#ffb69e", "#ff6e3d", "#db3700", "#992600"]
+          "range": ["#588FED", "#8758ED", "#ED58B9", "#ED5D58"]
         }
       },
       "tooltip": [
@@ -40,7 +41,8 @@
           "title": "Total Litres of pure alcohol"
         }
       ]
-    }
+    },
+    "config": {}
   }
 
    

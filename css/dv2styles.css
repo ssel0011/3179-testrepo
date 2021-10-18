@@ -11,3 +11,66 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 }
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 'lightest';
+}
+
+.description h2 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 'Light';
+}
+
+body {
+	background-color: lightgray;
+}
+
+.page {
+	width: 850px;
+	background-color: beige;
+	margin: auto;
+	padding: 50px;
+	padding-top: 35px
+}
+
+.vis-container {
+	width: 100%;
+}
+
+.description-left {
+	padding-right: 20px
+}
+
+.total_litres {
+	color: #ce1f1f
+}
+
+.beer_serve {
+	color: #c2ce1f
+}
+
+.spirit_serve {
+	color: #df16c4
+}
+
+.wine_serve {
+	color: #301fce 
+}
+
+.description-up {
+	padding-bottom: 20px
+}
+
+.map_pure {
+	margin-bottom: 50px;
+}
+
+.df_pure {
+	margin-bottom: 50px;
+}
+
+.pa_pure {
+	margin-bottom: 50px;
+}
+

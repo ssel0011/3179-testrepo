@@ -4,6 +4,7 @@
     "data": {
     "url": "https://raw.githubusercontent.com/ssel0011/3179-testrepo/main/visual/default/drinks.csv"
     },
+    "background": "beige",
     "params": [
         {
           "name": "alcohol_selection",
@@ -23,7 +24,7 @@
     "encoding": {
         "x": {"field": "total_litres_of_pure_alcohol", "type": "quantitative", "title": "Total Litres of Pure Alcohol"},
         "y": {"field": "alcohol_select", "type": "quantitative", "title": "Alcohol Servings"},
-        "size": {"aggregate": "mean", "field": "alcohol_select"},
+        "size": {"aggregate": "mean", "field": "alcohol_select", "title": "Mean of Alcohol Servings"},
         
         "tooltip": [
             {"field": "country", "type": "nominal", "title": "Country"},
@@ -31,7 +32,7 @@
             {"field": "alcohol_select", "type": "quantitative", "title": "Servings"}
         ]
    },
-   "width": 425,
-   "height": 425,
+   "width": 375,
+   "height": 375,
    "config": {} 
   }
